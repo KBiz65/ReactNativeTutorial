@@ -8,17 +8,17 @@ const ImageScreen = ({ navigation }) => {
       <ImageDetail
         title="Forest"
         imageSource={require('../../assets/forest.jpg')}
-        imageScore="5"
+        imageScore={5}
       />
       <ImageDetail
         title="Beach"
         imageSource={require('../../assets/beach.jpg')}
-        imageScore="9"
+        imageScore={9}
       />
       <ImageDetail
         title="Mountain"
         imageSource={require('../../assets/mountain.jpg')}
-        imageScore="7"
+        imageScore={7}
       />
       <Button onPress={() => navigation.navigate('Home')} title="Back" />
     </View>
