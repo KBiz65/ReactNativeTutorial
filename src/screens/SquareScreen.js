@@ -13,8 +13,7 @@ const reducer = (state, action) => {
         ? state
         : { ...state, red: state.red + action.payload };
     case 'change_green':
-      return state.green + action.payload > 255 ||
-        state.green + action.payload < 0
+      return state.green + action.payload > 255 || state.green + action.payload < 0
         ? state
         : { ...state, green: state.green + action.payload };
     case 'change_blue': 
@@ -37,7 +36,7 @@ const SquareScreen = () => {
       <ColorCounter
         color="Red"
         onIncrease={() => dispatch({ type: 'change_red', payload: COLOR_INCREMENT })}
-        onDecrease={() => dispatch({ type: 'change_red', amount: -1 * COLOR_INCREMENT })}
+        onDecrease={() => dispatch({ type: 'change_red', payload: -1 * COLOR_INCREMENT })}
       />
       <ColorCounter
         color="Green"
